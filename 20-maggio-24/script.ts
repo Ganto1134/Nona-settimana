@@ -47,3 +47,6 @@ class User implements Smartphone {
 }
 
 const utente = new User("Antonio", "Gantolea");
+
+utente.ricarica(15); // Aggiunge 10 euro di credito
+console.log(`Credito dopo ricarica: ${utente.chiama404()}€`);
