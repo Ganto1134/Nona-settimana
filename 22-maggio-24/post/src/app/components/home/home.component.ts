@@ -1,4 +1,5 @@
-import { iPosts } from './../../Models/posts';
+import { iJsonContent } from '../../Models/json-content';
+import { iPost } from './../../Models/posts';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,17 +9,19 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  via = '/post/src/assets/db.json';
-
-  array:iPosts[] = []
+  array:iPost[] = []
 
   ngOnInit(){
+
+    this.getPosts()
+
  }
     async getPosts():Promise<void> {
-    let response = await fetch(this.via)
-    let posts = <iPosts[]> await response.json()
+      const response = await fetch('../../../assets/db.json')
+      const posts = <iJsonContent> await response.json()
 
-    this.array = posts;
+      this.array = posts.posts;
 
   }
+
 }

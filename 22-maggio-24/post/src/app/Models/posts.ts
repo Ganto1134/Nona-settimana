@@ -1,7 +1,8 @@
-export interface iPosts {
-  id:number
+export interface iPost {
+  id: number
   title: string
   body: string
   userId: number
+  tags: string[]
   active: boolean
 }
