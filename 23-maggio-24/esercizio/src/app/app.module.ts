@@ -10,6 +10,7 @@ import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.co
 import { DetailComponent } from './pages/detail/detail.component';
 import { RouterModule } from '@angular/router';
 import { Page404Component } from './pages/page404/page404.component';
+import { SingleDetailComponent } from './pages/single-detail/single-detail.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { Page404Component } from './pages/page404/page404.component';
     ActivePostsComponent,
     InactivePostsComponent,
     DetailComponent,
-    Page404Component
+    Page404Component,
+    SingleDetailComponent
   ],
   imports: [
     BrowserModule,
